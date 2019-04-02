@@ -1,0 +1,157 @@
+
+body{
+    width:100%;
+    margin: 0px;
+padding: 0px;
+
+}
+.main {
+  padding: 16px;
+  margin-top: 80px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+.main h1{font-size: 50px;}
+.main h2{font-size: 35px;
+color: #758723}
+.main a{
+	border-radius: 18px;
+	text-decoration:none;
+	background-color: #455445;
+	margin: 20px;
+	padding: 14px 26px;
+	width: 350px;
+height: 150px;
+color: White;
+font-size: 30px;
+
+}
+.main a:hover{
+
+	background-color: #4559;
+
+
+}
+
+
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
+th, td {
+  text-align: center;
+  padding: 16px;
+}
+
+th:first-child, td:first-child {
+  text-align: left;
+}
+tr{
+
+  background-color: #f1f7f4
+
+}
+tr:nth-child(even) {
+  background-color: #4559
+}
+
+.fa-check {
+  color: green;
+}
+
+.fa-remove {
+  color: red;
+}
+.AddBox{
+  border: 1px solid #ccc;
+  font-size: 20px;
+
+}
+.TheBox{
+  float: left;
+}
+.h3Text{float: left; margin-left: 20px;
+margin-Top: -1px;
+margin-right: 5px;
+}
+.h3Tex{font-size: 20px;
+}
+.TheBox{
+  float: left;
+
+width: 300px;
+height: 40px;
+  font-size: 20px;
+
+}
+
+.TheBox1{
+
+width: 300px;
+height: 40px;
+  font-size: 20px;
+
+}
+.AddBT{
+
+  color: White;
+width: 140px;
+height: 80px;
+text-decoration: none;
+border-style: none;
+background-color: #455445;
+	border-radius: 18px;
+  font-size: 30px;
+}
+.AddBT1{
+
+  color: White;
+width: 200px;
+height: 80px;
+text-decoration: none;
+border-style: none;
+background-color: #455445;
+	border-radius: 18px;
+  font-size: 30px;
+}
+.AddBT1:hover{
+
+
+
+background-color: #4559;
+
+}
+.AddBT:hover{
+
+
+
+background-color: #4559;
+
+}
+.DeleteBT:hover{background-color: #4559;}
+.DeleteBT{  color: White;
+width: 80%;
+height: 40px;
+text-decoration: none;
+border-style: none;
+background-color: #455445;
+	border-radius: 18px;
+  font-size: 30px;}
+.BoxesClass{
+padding-left: 140px;
+
+}
+#TheBox{
+margin-left: 160px;
+
+}
+.AddNewExam{
+  width: 800px;
+  height: 400x;
+border: 1px solid #455445;
+
+
+}
