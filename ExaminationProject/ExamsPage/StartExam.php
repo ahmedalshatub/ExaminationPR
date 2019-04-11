@@ -83,7 +83,7 @@ function AddQusetions($ExamID,$QuestionTittle,$QuestionType) {
 
 
 $sql = "INSERT INTO questionstable (`QuestionTittle`, `QuestionType`, `ExamID`)
-VALUES ('$ExamID','$QuestionTittle','$QuestionType')";
+VALUES ('$QuestionTittle','$QuestionType','$ExamID')";
 
 if ($mysqli->query($sql) == false) {
     echo "Error: " . $sql . "<br>" . $mysqli->error;

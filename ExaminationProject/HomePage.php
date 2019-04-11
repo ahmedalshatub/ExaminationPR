@@ -21,11 +21,10 @@ if(!isset($_COOKIE['UserID'])) {
 <br>
   <a  href="./Teacherspages/TeachersPage.php">Teacher page</a>
   <a  href="./StudentsPages/StudentsPage.php">Students page</a>
-  <a  href="#">My Exams</a>
+  <a  href="./MyExamsPages">My Exams</a>
 <br><br><br><br>
   <a  href="./Teacherspages/MetalsPage.php">My Metals</a>
   <a  href="./ExamsPage">Add New Exam</a>
-  <a  href="#">Change Password</a>
 
   <br><br><br><br>
   <a  href="./LogOut.php">Log Out</a>
