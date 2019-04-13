@@ -9,9 +9,14 @@
 if(!isset($_COOKIE['UserID'])) {
         header('Location: ./index.php');
         exit();
-        
+
  }
 
+ session_start();
+ if(isset($_SESSION['ErorrText'])){
+ echo '<script type="text/javascript">alert("'.$_SESSION['ErorrText'].'");</script>';
+
+ unset($_SESSION['ErorrText']);}
 
 
 

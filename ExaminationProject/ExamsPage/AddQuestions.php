@@ -31,19 +31,38 @@ unset($_SESSION['ErorrText']);}
   <br><h1>Add New Exam</h1>
   <form action="./StartExam.php" method="post">
     Exam Title:<br>
-    <input type="text" class="TheBox1" name="ExamTitle" ><br>
+    <input type="text" class="TheBox1" name="ExamTitle" required="" ><br>
     Exam end Time:<br>
-    <input type="time" class="TheBox1" name="ExamEndTime" ><br>
+    <input type="time" class="TheBox1" name="ExamEndTime" required="" ><br>
       TheMetal:<br>
-    <select class="TheBox1" name="Metal">
+    <select class="TheBox1" name="Metal" required="">
     <?php GetTeachersMetalsTable(); ?>
     </select>
     <br><br><br>
 <?php
 echo "<hr>";
 $Thei=0;
+for ($i=0; $i < $_POST["TFCount"]; $i++) {
+  echo $Thei+1 ."-";
+  echo "The Question Title    ";
+echo     '<input class="TheBox1" type="text" name="TF'.$i.'" required="" >True/False<br>';
+
+echo "<hr>";
+$Thei++;
+
+}
+for ($i=0; $i < $_POST["TeCount"]; $i++) {
+  echo $Thei+1 ."-";
+  echo "The Question Title      ";
+echo     '<input class="TheBox1" type="text" name="Te'.$i.'" required="" ><br>';
+echo "<hr>";
+$Thei++;
+}
+
+
+
 for ($i=0; $i < $_POST["MuCount"]; $i++) {
-  echo $Thei+1;
+  echo $Thei+1 ."-";
   echo "The Question Title ";
 echo     '<input class="TheBox1" type="text" name="Mu'.$i.'" required=""><br><br>';
 echo "Choice A      ";
@@ -56,23 +75,6 @@ echo "Choice D      ";
 echo     '<input class="TheBox1" type="text" name="'.$i.'d" required="" ><br><br>';
 echo "<hr>";
 $Thei++;
-}
-for ($i=0; $i < $_POST["TeCount"]; $i++) {
-  echo $Thei+1;
-  echo "The Question Title      ";
-echo     '<input class="TheBox1" type="text" name="Te'.$i.'" required="" ><br>';
-echo "<hr>";
-$Thei++;
-}
-
-for ($i=0; $i < $_POST["TFCount"]; $i++) {
-  echo $Thei+1;
-  echo "The Question Title    ";
-echo     '<input class="TheBox1" type="text" name="TF'.$i.'" required="" >True/False<br>';
-
-echo "<hr>";
-$Thei++;
-
 }
 
 

@@ -6,7 +6,7 @@
 if(!isset($_COOKIE['UserID'])) {
         header('Location: ./index.php');
         exit();
-        
+
  }  ?>
 <?php
 session_start();
@@ -33,13 +33,13 @@ unset($_SESSION['ErorrText']);}
     <br>
     <h4 class="h3Tex">  number of Multi Choice Questions:</h4>
 
-    <input class="TheBox1" min="1" max="5" value="1"  type="number" name="MuCount"><br>
+    <input class="TheBox1" min="0" max="5" value="1"  type="number" name="MuCount"><br>
     <h4 class="h3Tex">     number of Text Questions:</h4>
 
-    <input class="TheBox1" min="1" max="5" value="1"  type="number" name="TeCount"><br>
+    <input class="TheBox1" min="0" max="5" value="1"  type="number" name="TeCount"><br>
     <h4 class="h3Tex">  number of True False Questions:</h4>
 
-    <input class="TheBox1" min="1" max="5" value="1"  type="number" name="TFCount"><br><br><br>
+    <input class="TheBox1" min="0" max="5" value="1"  type="number" name="TFCount"><br><br><br>
 
 
 

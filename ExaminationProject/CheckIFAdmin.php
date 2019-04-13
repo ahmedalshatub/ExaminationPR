@@ -2,24 +2,31 @@
 if (!isset($_COOKIE['UserID']) )
 {
   header('Location: ./index.php');
-
+exit();
 }
+session_start();
+
 if (!isset($_SESSION['PageName']) )
 {
   header('Location: ./HomePage.php');
+  exit();
 
 }
 $PageName=$_SESSION["PageName"];
 
 $UserID=$_COOKIE["UserID"];
-if($CheckIFISAdmin($UserID)==true){}
+if(CheckIFISAdmin($UserID)==false){
   session_start();
   $_SESSION['ErorrText'] = "You Are Not The Admin";
-  header('Location: ./TeachersDashBoard.php');
+  header('Location: ./index.php');
 
-   exit();}
+   exit();
+
+ }
 else {
-  header('Location: ./'$PageName'.php');
+  session_start();
+  $_SESSION['TrueAdmin'] = "T";
+  header('Location: '.$PageName.'.php');
 }
 
 function CheckIFISAdmin($TeacherID) {

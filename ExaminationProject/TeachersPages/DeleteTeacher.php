@@ -17,15 +17,19 @@ $TeacherID=$_POST['TeacherID'];
 if(!CheckIFISExistAdmin($TeacherID)){
 
   session_start();
-   $_SESSION['ErorrText'] = "The Teacher Does Not Exist";
-   header('Location: ./TeachersPage.php');
+  $_SESSION['TrueAdmin'] = "T";
 
+   $_SESSION['ErorrText'] = "The Teacher Does Not Exist";
+
+   header('Location: ./TeachersPage.php');
    exit();
 }
 
 
 
 DeleteTeacher($TeacherID);
+session_start();
+$_SESSION['TrueAdmin'] = "T";
 header('Location: ./TeachersPage.php');
 exit();
 

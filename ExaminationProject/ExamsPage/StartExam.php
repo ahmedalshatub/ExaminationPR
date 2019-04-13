@@ -63,7 +63,7 @@ break;
 }
 
  header('Location: ../HomePage.php');
-
+exit();
 
 
 

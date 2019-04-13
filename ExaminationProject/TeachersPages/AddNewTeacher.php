@@ -21,13 +21,16 @@ if($UserID!=0)
  {
    session_start();
     $_SESSION['ErorrText'] = "The UserName Already Exist Chose Another One";
+    session_start();
+    $_SESSION['TrueAdmin'] = "T";
     header('Location: ./TeachersPage.php');
 
     exit();
  }
 AddNewTeacher($_POST['UserName'],$_POST['Password'],$_POST['Level']);
 
-
+session_start();
+$_SESSION['TrueAdmin'] = "T";
 header('Location: ./TeachersPage.php');
 exit();
 

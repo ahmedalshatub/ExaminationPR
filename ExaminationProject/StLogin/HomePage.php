@@ -6,7 +6,7 @@
 if(!isset($_COOKIE['StID'])) {
         header('Location: ./index.php');
         exit();
-        
+
  }  ?>
 <?php
 session_start();
@@ -18,10 +18,11 @@ unset($_SESSION['ErorrText']);}
 
  ?>
 </head>
-
+  <br>  <br>  
 <body background="../img/bg.jpg">
-  <a  href="./LogOut.php">Log Out</a>
 
+  <div class="StBT"><center>
+    <a  href="./LogOut.php">Log Out</a></center></div>
 
 
 

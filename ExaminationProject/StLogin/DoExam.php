@@ -98,13 +98,14 @@ $k=1;
   if($TheTable['QuestionType']=="TF"){
 echo "<tr>";
 echo "<td>";
+
+echo $k; echo "</td>";
+echo "<td>";
 echo $TheTable['QuestionTittle']; echo "</td>";
 
 
 
-echo "<td>";
 
-echo $k; echo "</td>";
 
 echo "<td>";
 
@@ -118,13 +119,14 @@ echo "</tr>";
   if($TheTable['QuestionType']=="Te"){
 echo "<tr>";
 echo "<td>";
+
+echo $k; echo "</td>";
+echo "<td>";
 echo $TheTable['QuestionTittle']; echo "</td>";
 
 
 
-echo "<td>";
 
-echo $k; echo "</td>";
 
 echo "<td>";
 echo "    <textarea rows = '5' cols = '60' name = '$k'></textarea>";
@@ -138,13 +140,14 @@ echo "</tr>";
     $ChNum=1;
   echo "<tr>";
   echo "<td>";
+
+  echo $k; echo "</td>";
+  echo "<td>";
   echo $TheTable['QuestionTittle']; echo "</td>";
 
 
 
-  echo "<td>";
 
-  echo $k; echo "</td>";
 
   echo "<td>";
   $QID=$TheTable['QuestionID'];

@@ -3,13 +3,23 @@
 <title>Teachers</title>
 <link rel="stylesheet" href="../Style/Style.css">
 <?php
+session_start();
+if(!isset($_SESSION['TrueAdmin'])){
+  $_SESSION['PageName'] = "../TeachersPages/TeachersPage.php";
+  header('Location: ../CheckIFAdmin.php');
+exit();
+
+}
+unset($_SESSION['TrueAdmin']);
+
+
+
 if(!isset($_COOKIE['UserID'])) {
         header('Location: ./index.php');
         exit();
-        
+
  }  ?>
 <?php
-session_start();
 if(isset($_SESSION['ErorrText'])){
 echo '<script type="text/javascript">alert("'.$_SESSION['ErorrText'].'");</script>';
 
@@ -84,6 +94,7 @@ GetTeachersTable();
    </tr>";
    while($TheTable=mysqli_fetch_array($result))
    {
+
    echo "<tr>";
    echo "<td>" . $TheTable['TeacherID'] . "</td>";
 
