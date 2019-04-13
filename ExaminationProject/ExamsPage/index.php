@@ -5,6 +5,8 @@
 <?php
 if(!isset($_COOKIE['UserID'])) {
         header('Location: ./index.php');
+        exit();
+        
  }  ?>
 <?php
 session_start();

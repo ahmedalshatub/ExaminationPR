@@ -2,6 +2,7 @@
 if (!isset($_COOKIE['UserID']) )
 {
   header('Location: ../index.php');
+  exit();
 
 }
 if (!isset($_POST['MetalID']) )
@@ -9,6 +10,7 @@ if (!isset($_POST['MetalID']) )
 
   header('Location: ../HomePage.php');
 
+  exit();
 
 }
 $MetalID=$_POST['MetalID'];

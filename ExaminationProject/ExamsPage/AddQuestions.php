@@ -5,6 +5,8 @@
 <?php
 if(!isset($_COOKIE['UserID'])) {
         header('Location: ./index.php');
+        exit();
+
  }  ?>
 <?php
 session_start();
@@ -43,22 +45,22 @@ $Thei=0;
 for ($i=0; $i < $_POST["MuCount"]; $i++) {
   echo $Thei+1;
   echo "The Question Title ";
-echo     '<input class="TheBox1" type="text" name="Mu'.$i.'" ><br><br>';
+echo     '<input class="TheBox1" type="text" name="Mu'.$i.'" required=""><br><br>';
 echo "Choice A      ";
-echo     '<input class="TheBox1" type="text" name="'.$i.'a" ><br><br>';
+echo     '<input class="TheBox1" type="text" name="'.$i.'a" required="" ><br><br>';
 echo "Choice B      ";
-echo     '<input class="TheBox1" type="text" name="'.$i.'b" ><br><br>';
+echo     '<input class="TheBox1" type="text" name="'.$i.'b" required="" ><br><br>';
 echo "Choice C      ";
-echo     '<input class="TheBox1" type="text" name="'.$i.'c" ><br><br>';
+echo     '<input class="TheBox1" type="text" name="'.$i.'c"  required=""><br><br>';
 echo "Choice D      ";
-echo     '<input class="TheBox1" type="text" name="'.$i.'d" ><br><br>';
+echo     '<input class="TheBox1" type="text" name="'.$i.'d" required="" ><br><br>';
 echo "<hr>";
 $Thei++;
 }
 for ($i=0; $i < $_POST["TeCount"]; $i++) {
   echo $Thei+1;
   echo "The Question Title      ";
-echo     '<input class="TheBox1" type="text" name="Te'.$i.'" ><br>';
+echo     '<input class="TheBox1" type="text" name="Te'.$i.'" required="" ><br>';
 echo "<hr>";
 $Thei++;
 }
@@ -66,7 +68,7 @@ $Thei++;
 for ($i=0; $i < $_POST["TFCount"]; $i++) {
   echo $Thei+1;
   echo "The Question Title    ";
-echo     '<input class="TheBox1" type="text" name="TF'.$i.'" >True/False<br>';
+echo     '<input class="TheBox1" type="text" name="TF'.$i.'" required="" >True/False<br>';
 
 echo "<hr>";
 $Thei++;
@@ -82,7 +84,7 @@ $Thei++;
 
 
 
-  <input class="AddBT1"  type="submit" value="Start Exams">
+  <input class="AddBT"  type="submit" value="Start Exams">
 </form></div></center>
 </body>
 </html>

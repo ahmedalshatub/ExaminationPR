@@ -3,6 +3,7 @@
 if (!isset($_COOKIE['UserID']) )
 {
   header('Location: ../index.php');
+  exit();
 
 }
 if (!isset($_POST['ExamTitle']) )
@@ -10,6 +11,7 @@ if (!isset($_POST['ExamTitle']) )
 
 
   header("Location:../index.php");
+  exit();
 
 }
 if (!isset($_POST['ExamEndTime']) )
@@ -17,6 +19,7 @@ if (!isset($_POST['ExamEndTime']) )
 
 
   header("Location:../index.php");
+  exit();
 
 }
 

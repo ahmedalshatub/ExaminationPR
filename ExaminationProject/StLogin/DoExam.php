@@ -5,6 +5,8 @@
 <?php
 if(!isset($_COOKIE['StID'])) {
         header('Location: ./index.php');
+        exit();
+
  }
  if(!isset($_POST['ExamID'])) {
          header('Location: ./index.php');
@@ -43,7 +45,11 @@ unset($_SESSION['ErorrText']);}
 GetQuestionsTable();
 $TheExam= $_POST['ExamID'] ;
  ?>
- <button type="submit"  Name="ExamID" value="<?php echo $TheExam;  ?>">Send Answers</button>
+ <br>
+ <center>
+ <button type="submit" class="AddBT"  Name="ExamID" value="<?php echo $TheExam;  ?>">Send Answers</button>
+</center>
+
 </form>
 </body>
 </html>

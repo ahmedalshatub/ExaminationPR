@@ -3,6 +3,7 @@
 if (!isset($_COOKIE['UserID']) )
 {
   header('Location: ../index.php');
+  exit();
 
 }
 if (!isset($_POST['UserName']) )
@@ -10,6 +11,7 @@ if (!isset($_POST['UserName']) )
 
 
   header("Location:../index.php");
+  exit();
 
 }
 
@@ -18,6 +20,7 @@ AddNewSt($_POST['UserName'],$_POST['Password'],$_POST['StLevel']);
 
 
 header('Location: ./StudentsPage.php');
+exit();
 
 
 

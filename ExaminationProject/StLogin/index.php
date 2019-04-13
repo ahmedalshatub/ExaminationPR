@@ -12,27 +12,36 @@
 
   if(isset($_COOKIE['StID'])) {
           header('Location: ./HomePage.php');
+          exit();
+
    }
    ?>
 </head>
 
-<body >
-  <div class="wrapper">
-    <form class="form-signin" method="post" action="./CheckLogin.php">
-      <center>
-      <h2 class="LoginHeader">Do Exams</h2>
-      <input type="text" id="LoginBox" class="form-control" name="UserName" placeholder="UserName" required="" autofocus="" /><br><br>
-      <input type="password" id="LoginBox" class="form-control" name="Password" placeholder="Password" required=""/><br>
+<body background="../img/bg.jpg" >
+  <br><br><br>
+  <center>
+  <div class="AddNewExam">
+  <br><h1>Do Exams</h1>
+  <form action="./CheckLogin.php" method="post">
+    <br>
+    <h4 class="h3Tex">UserName</h4>
+    <input class="TheBox1"  type="text" name="UserName" required="">
+
+    <h4 class="h3Tex">Password</h4>
+    <input class="TheBox1" type="password" name="Password" required=""><br><br>
+
+
+
+
+<input class="AddBT" type="submit" value="Login"> <br>
+<br><br>
+
 <br>
-      <button class="LoginBT" type="submit">Login</button>
-    </center>
-    <div class="main1"><br>
-      <center>
+  </form></div></center>
 
 
-    </center>
-      </div>
-    </form>
-  </div>
+
+
 </body>
 </html>

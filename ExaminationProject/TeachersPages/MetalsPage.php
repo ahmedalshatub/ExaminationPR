@@ -18,6 +18,8 @@ unset($_SESSION['ErorrText']);}
 <?php
 if(!isset($_COOKIE['UserID'])) {
         header('Location: ./index.php');
+        exit();
+        
  }  ?>
  <center>
  <div class="AddnewTeacherBox">

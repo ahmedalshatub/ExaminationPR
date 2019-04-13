@@ -3,6 +3,7 @@
 if (!isset($_COOKIE['UserID']) )
 {
   header('Location: ../index.php');
+  exit();
 
 }
 if (!isset($_POST['UserName']) )
@@ -10,6 +11,7 @@ if (!isset($_POST['UserName']) )
 
 
   header("Location:../index.php");
+  exit();
 
 }
 $EnteredUserName=$_POST['UserName'];
@@ -27,6 +29,7 @@ AddNewTeacher($_POST['UserName'],$_POST['Password'],$_POST['Level']);
 
 
 header('Location: ./TeachersPage.php');
+exit();
 
 
 

@@ -6,9 +6,12 @@
 <?php
 if(!isset($_COOKIE['UserID'])) {
         header('Location: ./index.php');
+        exit();
  }
  if(!isset($_POST['ExamID'])) {
          header('Location: ./index.php');
+         exit();
+         
   }
 
   ?>

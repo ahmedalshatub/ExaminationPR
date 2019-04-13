@@ -2,11 +2,14 @@
 
 if(!isset($_COOKIE['StID'])) {
         header('Location: ./index.php');
+        exit();
+
  }
 if (!isset($_POST['ExamID']) )
 {
 
   header("Location:./index.php");
+  exit();
 
 }
 if (!isset($_POST['1']) )
@@ -14,6 +17,7 @@ if (!isset($_POST['1']) )
 
 
   header("Location:./index.php");
+  exit();
 
 }
 
@@ -33,7 +37,8 @@ else {
 
 
 header('Location: ./index.php');
-// GetTheDateOfExam();
+exit();
+
 function SetAnswers($ExamIDs) {
   if(CheckIFHeDOTheExam($ExamIDs)){
     session_start();

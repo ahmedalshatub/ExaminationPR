@@ -3,6 +3,7 @@
 if (!isset($_COOKIE['UserID']) )
 {
   header('Location: ../index.php');
+  exit();
 
 }
 if (!isset($_POST['MetalName']) )
@@ -10,6 +11,7 @@ if (!isset($_POST['MetalName']) )
 
 
   header("Location:../index.php");
+  exit();
 
 }
 
@@ -18,6 +20,7 @@ AddNewSt($_POST['MetalName'],$_COOKIE['UserID'],$_POST['TheLevel']);
 
 
 header('Location: ./MetalsPage.php');
+exit();
 
 
 

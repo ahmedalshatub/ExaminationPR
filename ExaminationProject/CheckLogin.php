@@ -4,6 +4,8 @@ if (!isset($_POST['username']) )
 {
 
   header('Location: ./index.php');
+  exit();
+
 
 
 }
@@ -31,6 +33,8 @@ $_SESSION['ErorrText'] = "The Password IS Not Correct";
   else {
     setcookie("UserID", $UserID, time() + (86400 * 1000), "/");
 header('Location: ./HomePage.php');
+exit();
+
   }
 
 }

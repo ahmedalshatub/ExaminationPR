@@ -2,12 +2,14 @@
 if (!isset($_COOKIE['UserID']) )
 {
   header('Location: ../index.php');
+  exit();
 
 }
 if (!isset($_POST['TeacherID']) )
 {
 
   header('Location: ../HomePage.php');
+  exit();
 
 
 }
@@ -25,6 +27,7 @@ if(!CheckIFISExistAdmin($TeacherID)){
 
 DeleteTeacher($TeacherID);
 header('Location: ./TeachersPage.php');
+exit();
 
 function DeleteTeacher($TeacherID) {
   include '../Connection.php';
