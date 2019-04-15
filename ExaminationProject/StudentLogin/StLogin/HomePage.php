@@ -1,7 +1,7 @@
 <html>
 <head>
 <title>Choose Exam</title>
-<link rel="stylesheet" href="../Style/Style.css">
+<link rel="stylesheet" href="../../Style/Style.css">
 <?php
 if(!isset($_COOKIE['StID'])) {
         header('Location: ./index.php');
@@ -18,8 +18,8 @@ unset($_SESSION['ErorrText']);}
 
  ?>
 </head>
-  <br>  <br>  
-<body background="../img/bg.jpg">
+  <br>  <br>
+<body background="../../img/bg.jpg">
 
   <div class="StBT"><center>
     <a  href="./LogOut.php">Log Out</a></center></div>

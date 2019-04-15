@@ -2,7 +2,7 @@
 <head>
 
 <title>Students Manger || Do Exams</title>
-  <link rel="stylesheet" href="../Style/Style.css">
+  <link rel="stylesheet" href="../../Style/Style.css">
   <?php
   session_start();
   if(isset($_SESSION['ErorrText'])){
@@ -18,7 +18,7 @@
    ?>
 </head>
 
-<body background="../img/bg.jpg" >
+<body background="../../img/bg.jpg" >
   <br><br><br>
   <center>
   <div class="AddNewExam">

@@ -1,7 +1,7 @@
 <html>
 <head>
 <title>My Exams</title>
-<link rel="stylesheet" href="../Style/Style.css">
+<link rel="stylesheet" href="../../Style/Style.css">
 
 <?php
 if(!isset($_COOKIE['UserID'])) {
@@ -11,7 +11,7 @@ if(!isset($_COOKIE['UserID'])) {
  if(!isset($_POST['ExamID'])) {
          header('Location: ./index.php');
          exit();
-         
+
   }
 
   ?>
@@ -26,7 +26,7 @@ unset($_SESSION['ErorrText']);}
  ?>
 </head>
 
-<body background="../img/bg.jpg">
+<body background="../../img/bg.jpg">
 
 <center>
   <h1>The Exam :
