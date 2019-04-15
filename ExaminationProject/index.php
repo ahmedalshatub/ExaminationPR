@@ -13,7 +13,7 @@
   <div class="StBT"><center>
     <a href="./StudentLogin/StLogin">Teachers Login</a><br><br><br><br><br><br>
 
-    <a href="./StudentLogin/StLogin">Students Login</a></center></div><br><br>
+    <a href="./TeacherLogin">Students Login</a></center></div><br><br>
 </div></center>
 
 </body>
