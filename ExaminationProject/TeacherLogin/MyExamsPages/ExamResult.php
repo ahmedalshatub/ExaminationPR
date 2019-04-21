@@ -14,6 +14,8 @@ if(!isset($_COOKIE['UserID'])) {
 
   }
 
+
+
   ?>
 <?php
 session_start();
@@ -23,10 +25,16 @@ echo '<script type="text/javascript">alert("'.$_SESSION['ErorrText'].'");</scrip
 unset($_SESSION['ErorrText']);}
 
 
+
+
+ $_SESSION['TheExamID'] =$_POST['ExamID'];
+
+
  ?>
 </head>
 
 <body background="../../img/bg.jpg">
+
 
 <center>
   <h1>The Exam :
@@ -98,6 +106,15 @@ $TheNum=0;
    if($TheTable['StID']!=$TheNum){
      if($TheNum!=0){
 
+       echo "<center>";
+       echo '<form action="./SetDgree.php" method="post" target="_blank">';
+       echo '<input class="TheBox" readonly="readonly" type="hidden" value="'.$TheNum.'"  type="text" name="TheStID">';
+       echo '<h4 class="h3Text">The Dgree:  </h4>';
+       echo '<input class="TheBox11" type="Number" value="'.GetDgree($TheNum,$TheExamID).'" Max="100" Min="0" name="TheDgree">';echo "<br>";echo "<br>";echo "<br>";
+
+       echo '<input  type="submit" class="TheBt11" value="Add Dgree">';
+       echo "</form>";echo "<br>";echo "<br>";echo "<br>";
+       echo "</center>";
 
        echo '</div>';}
 
@@ -124,6 +141,15 @@ echo "<br>";
 
 }
  if($TheNum!=0){
+   echo "<center>";
+   echo '<form action="./SetDgree.php" method="post" target="_blank">';
+   echo '<input class="TheBox" readonly="readonly" type="hidden" value="'.$TheNum.'"  type="text" name="TheStID">';
+   echo '<h4 class="h3Text">The Dgree:  </h4>';
+   echo '<input class="TheBox11" type="Number" value="'.GetDgree($TheNum,$TheExamID).'" Max="100" Min="0" name="TheDgree">';echo "<br>";echo "<br>";echo "<br>";
+
+   echo '<input  type="submit" class="TheBt11" value="Add Dgree">';
+   echo "</form>";echo "<br>";echo "<br>";echo "<br>";
+   echo "</center>";
 echo '</div>';}
 else {
   echo "<center>";
@@ -141,7 +167,16 @@ else {
 
 
 
+function GetDgree($TheStID,$TheExamID) {
+  include '../Connection.php';
+      $sql = "SELECT Dgree FROM dgreestable Where `StID`='$TheStID' AND `ExamID`='$TheExamID' ";
+$result = $mysqli->query($sql);
 
+
+$row = mysqli_fetch_array($result);
+return $row[0];
+
+}
 
 
 
@@ -151,6 +186,7 @@ else {
  ?>
 
  <script>
+
  var acc = document.getElementsByClassName("accordion");
  var i;
 

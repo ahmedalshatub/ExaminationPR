@@ -37,8 +37,7 @@ unset($_SESSION['ErorrText']);}
 
 <input class="AddBT" type="submit" value="Teachers Login"> <br>
 <br><br>
-<div class="StBT"><center>
-<a href="./StLogin">Student Login</a></center></div>
+
 <br>
   </form></div></center>
 

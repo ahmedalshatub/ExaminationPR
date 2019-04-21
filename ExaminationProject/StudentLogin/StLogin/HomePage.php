@@ -22,7 +22,8 @@ unset($_SESSION['ErorrText']);}
 <body background="../../img/bg.jpg">
 
   <div class="StBT"><center>
-    <a  href="./LogOut.php">Log Out</a></center></div>
+    <a  href="./LogOut.php">Log Out</a>
+    <a  href="./ShowMyDgree.php">Show My Dgrees</a></center></div></center>
 
 
 

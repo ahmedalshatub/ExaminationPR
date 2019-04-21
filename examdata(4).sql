@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 13, 2019 at 04:16 PM
+-- Generation Time: Apr 21, 2019 at 08:22 PM
 -- Server version: 10.1.29-MariaDB
 -- PHP Version: 7.2.0
 
@@ -41,15 +41,29 @@ CREATE TABLE `answerstable` (
 --
 
 INSERT INTO `answerstable` (`StID`, `QestionID`, `Answer`, `ExamID`, `AnswerDateTime`) VALUES
-(2, 12, 'True', 7, '2019-04-11 18:49:18'),
-(2, 13, '1234', 7, '2019-04-11 18:49:18'),
-(2, 14, '14,', 7, '2019-04-11 18:49:18'),
-(4, 12, 'True', 7, '2019-04-11 21:20:58'),
-(4, 13, 'ahmed lateefahmed lateefahmed lateefahmed lateefahmed lateefahmed lateefahmed lateefahmed lateefahmed lateefahmed lateefahmed lateefahmed lateefahmed lateefahmed lateefahmed lateefahmed lateefahmed lateefahmed lateefahmed lateefahmed lateefahmed lateefahmed lateefahmed lateefahmed lateefahmed lateefahmed lateefahmed lateefahmed lateefahmed lateefahmed lateefahmed lateefahmed lateefahmed lateefahmed lateefahmed lateefahmed lateefahmed lateefahmed lateefahmed lateefahmed lateefahmed lateef', 7, '2019-04-11 21:20:58'),
-(4, 14, '12,13,14,15,', 7, '2019-04-11 21:20:58'),
-(5, 15, 'True', 8, '2019-04-13 15:58:34'),
-(5, 16, 'hello', 8, '2019-04-13 15:58:34'),
-(5, 17, '2,4', 8, '2019-04-13 15:58:34');
+(6, 21, 'True', 10, '2019-04-21 17:51:08'),
+(6, 22, '132132', 10, '2019-04-21 17:51:08'),
+(6, 23, 'jpg,gif,', 10, '2019-04-21 17:51:08');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dgreestable`
+--
+
+CREATE TABLE `dgreestable` (
+  `DgreeID` int(11) NOT NULL,
+  `ExamID` int(11) NOT NULL,
+  `StID` int(11) NOT NULL,
+  `Dgree` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `dgreestable`
+--
+
+INSERT INTO `dgreestable` (`DgreeID`, `ExamID`, `StID`, `Dgree`) VALUES
+(2, 10, 6, 22);
 
 -- --------------------------------------------------------
 
@@ -70,10 +84,7 @@ CREATE TABLE `examtable` (
 --
 
 INSERT INTO `examtable` (`ExamID`, `ExamTitle`, `MetalID`, `ExamDate`, `ExamTime`) VALUES
-(6, 'Hello', 1, '2019-04-07', '23:02'),
-(7, 'aaa', 1, '2019-04-11', '12:03'),
-(8, 'Ø§Ù„Ø´Ù‡Ø± Ø§Ù„Ø§ÙˆÙ„', 4, '2019-04-13', '12:00'),
-(9, 'b', 4, '2019-04-13', '09:08');
+(10, 'Ø§Ù„Ø´Ù‡Ø± Ø§Ù„Ø§ÙˆÙ„', 5, '2019-04-13', '00:00');
 
 -- --------------------------------------------------------
 
@@ -93,9 +104,27 @@ CREATE TABLE `metaltable` (
 --
 
 INSERT INTO `metaltable` (`MetalID`, `MetalName`, `TeacherID`, `Level`) VALUES
-(1, 'c++', 1, 1),
-(3, 'c#', 1, 2),
-(4, 'Ø§Ù…Ù†ÙŠØ©', 3, 4);
+(5, 'Ø¶ØºØ·', 1, 4);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `objectiontable`
+--
+
+CREATE TABLE `objectiontable` (
+  `ExamID` int(11) NOT NULL,
+  `StID` int(11) NOT NULL,
+  `objectionTitle` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `objectiontable`
+--
+
+INSERT INTO `objectiontable` (`ExamID`, `StID`, `objectionTitle`) VALUES
+(6, 10, 'aaaaaaaaaa'),
+(10, 6, 'aaaaaaaaaaa');
 
 -- --------------------------------------------------------
 
@@ -114,34 +143,10 @@ CREATE TABLE `questionchoice` (
 --
 
 INSERT INTO `questionchoice` (`ChID`, `ChoiceTitle`, `QuestionID`) VALUES
-(17, '1', 6),
-(18, '2', 6),
-(19, '3', 6),
-(20, '4', 6),
-(21, 'ali', 7),
-(22, 'ahmed', 7),
-(23, 'ahmed ali', 7),
-(24, 'ali ahmed', 7),
-(25, '|Ø§Ù„Ø³Ù„Ø§Ù… Ø¹Ù„ÙŠÙƒÙ…', 8),
-(26, 'Ø´Ù„ÙˆÙ†ÙƒÙ…', 8),
-(27, 'ÙˆØ¹Ù„ÙŠÙƒÙ… Ø§Ù„Ø³Ù„Ø§Ù…', 8),
-(28, 'Ø«ÙŠÙ…Ù„Ø§', 8),
-(29, '1', 11),
-(30, '2', 11),
-(31, '3', 11),
-(32, '4', 11),
-(33, '12', 14),
-(34, '13', 14),
-(35, '14', 14),
-(36, '15', 14),
-(37, '1', 17),
-(38, '2', 17),
-(39, '3', 17),
-(40, '4', 17),
-(41, '1', 20),
-(42, '1', 20),
-(43, '1', 20),
-(44, '1', 20);
+(45, 'jpg', 23),
+(46, 'png', 23),
+(47, 'gif', 23),
+(48, 'pmb', 23);
 
 -- --------------------------------------------------------
 
@@ -161,18 +166,9 @@ CREATE TABLE `questionstable` (
 --
 
 INSERT INTO `questionstable` (`QuestionID`, `QuestionTittle`, `QuestionType`, `ExamID`) VALUES
-(9, 'Is True', 'TF', 6),
-(10, 'Whats Type', 'Te', 6),
-(11, 'a', 'Mu', 6),
-(12, 'Ù‡Ø°Ø§ Ø²Ø§ÙŠØ¯', 'TF', 7),
-(13, 'Ø§ÙƒØªØ¨ Ø§ÙŠ Ø´ÙŠ ØªØ¹Ø±ÙÙ‡ Ø¹Ù† Ø§Ù„c++', 'Te', 7),
-(14, 'chois any thing', 'Mu', 7),
-(15, 'Ø§Ù„Ø³Ø¤Ø§Ù„ Ø§Ù„Ø«Ø§Ù„Ø«', 'TF', 8),
-(16, 'Ø§Ù„Ø³Ø¤Ø§Ù„ Ø§Ù„Ø«Ø§Ù†ÙŠ', 'Te', 8),
-(17, 'Ø§Ù„Ø³Ø¤Ø§Ù„ Ø§Ù„Ø§ÙˆÙ„', 'Mu', 8),
-(18, '2', 'TF', 9),
-(19, '1', 'Te', 9),
-(20, '1`', 'Mu', 9);
+(21, 'Ù‡Ù„ ØªØ¹ØªØ¨Ø± Ø§Ù„ pmb ÙˆØ³ÙŠÙ„Ø© Ø¶ØºØ·', 'TF', 10),
+(22, 'Ø¹Ø±Ù Ø§Ù„Ø¶ØºØ·', 'Te', 10),
+(23, 'Ù…Ø§ Ù‡ÙŠ ØµÙŠØº Ø§Ù„Ø¶ØºØ·', 'Mu', 10);
 
 -- --------------------------------------------------------
 
@@ -192,10 +188,7 @@ CREATE TABLE `studentstable` (
 --
 
 INSERT INTO `studentstable` (`StID`, `StName`, `StPassword`, `StLevel`) VALUES
-(2, 'ahmed1', '1234', 1),
-(3, 'ali', '899', 2),
-(4, 'hhh', 'aaa', 1),
-(5, 'ali majid', '1111', 4);
+(6, 'Ù…ØµØ·ÙÙ‰ Ø³Ù„ÙŠÙ…', '84983', 4);
 
 -- --------------------------------------------------------
 
@@ -215,10 +208,8 @@ CREATE TABLE `teacherstable` (
 --
 
 INSERT INTO `teacherstable` (`TeacherID`, `TeacherName`, `TeacherPassword`, `Level`) VALUES
-(1, 'Ahmed', 'Hamada', 0),
-(3, 'Ali', 'hh', 0),
-(4, 'mo', '132', 0),
-(7, 'ccc', '222', 0);
+(1, 'ali majid', '1234', 0),
+(10, 'ahmed', '318', 1);
 
 --
 -- Indexes for dumped tables
@@ -231,6 +222,12 @@ ALTER TABLE `answerstable`
   ADD KEY `StID` (`StID`),
   ADD KEY `ExamID` (`ExamID`),
   ADD KEY `QestionID` (`QestionID`);
+
+--
+-- Indexes for table `dgreestable`
+--
+ALTER TABLE `dgreestable`
+  ADD PRIMARY KEY (`DgreeID`);
 
 --
 -- Indexes for table `examtable`
@@ -282,40 +279,46 @@ ALTER TABLE `teacherstable`
 --
 
 --
+-- AUTO_INCREMENT for table `dgreestable`
+--
+ALTER TABLE `dgreestable`
+  MODIFY `DgreeID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `examtable`
 --
 ALTER TABLE `examtable`
-  MODIFY `ExamID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `ExamID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `metaltable`
 --
 ALTER TABLE `metaltable`
-  MODIFY `MetalID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `MetalID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `questionchoice`
 --
 ALTER TABLE `questionchoice`
-  MODIFY `ChID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `ChID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT for table `questionstable`
 --
 ALTER TABLE `questionstable`
-  MODIFY `QuestionID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `QuestionID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `studentstable`
 --
 ALTER TABLE `studentstable`
-  MODIFY `StID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `StID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `teacherstable`
 --
 ALTER TABLE `teacherstable`
-  MODIFY `TeacherID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `TeacherID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

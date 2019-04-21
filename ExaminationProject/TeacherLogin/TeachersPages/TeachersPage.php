@@ -5,7 +5,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['TrueAdmin'])){
-  $_SESSION['PageName'] = "../TeachersPages/TeachersPage.php";
+  $_SESSION['PageName'] = "./TeachersPages/TeachersPage.php";
   header('Location: ../CheckIFAdmin.php');
 exit();
 

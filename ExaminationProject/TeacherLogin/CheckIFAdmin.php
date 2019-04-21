@@ -26,7 +26,7 @@ if(CheckIFISAdmin($UserID)==false){
 else {
   session_start();
   $_SESSION['TrueAdmin'] = "T";
-  header('Location: '.$PageName.'.php');
+  header('Location: '.$PageName);
 }
 
 function CheckIFISAdmin($TeacherID) {

@@ -26,11 +26,13 @@ if(!isset($_COOKIE['UserID'])) {
 <h1 >DahsBoard</h1>
 <h2 >--<?php echo GetUserName(); ?>--</h2>
 <br>
-  <a  href="./Teacherspages/TeachersPage.php">Teacher page</a>
+  <a  href="./Teacherspages/TeachersPage.php">Manger page</a>
   <a  href="./StudentsPages/StudentsPage.php">Students page</a>
   <a  href="./MyExamsPages">My Exams</a>
 <br><br><br><br>
   <a  href="./Teacherspages/MetalsPage.php">My Metals</a>
+  <a  href="./Teacherspages/ShowDgree.php">Show Dgrees</a>
+
   <a  href="./ExamsPage">Add New Exam</a>
 
   <br><br><br><br>

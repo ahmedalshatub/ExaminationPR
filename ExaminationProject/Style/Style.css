@@ -108,6 +108,13 @@ height: 40px;
   font-size: 20px;
 
 }
+.TheBox11{
+
+width: 300px;
+height: 40px;
+  font-size: 20px;
+
+}
 .AddBT{
 
   color: White;
@@ -141,6 +148,26 @@ background-color: #4559;
 
 
 background-color: #4559;
+
+}
+.TheBt11:hover{
+
+
+
+background-color: #4559;
+
+}
+.TheBt11{
+
+  color: White;
+width: 200px;
+height: 80px;
+text-decoration: none;
+border-style: none;
+background-color: #455445;
+	border-radius: 18px;
+  font-size: 30px;
+margin-left: 100px;
 
 }
 .DeleteBT:hover{background-color: #4559;}
@@ -191,4 +218,20 @@ border: 1px solid #455445;
  display: none;
  background-color: white;
  overflow: hidden;
+}
+/*Poop Window  */
+{box-sizing: border-box;}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
 }

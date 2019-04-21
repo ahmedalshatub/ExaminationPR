@@ -15,7 +15,8 @@ echo '<script type="text/javascript">alert("'.$_SESSION['ErorrText'].'");</scrip
 
 unset($_SESSION['ErorrText']);}
 
-
+if(isset($_SESSION['TheExamID'])){
+unset($_SESSION['TheExamID']);}
  ?>
 </head>
 
@@ -56,7 +57,8 @@ GetExamsTable();
    <th>ExamID</th>
    <th>ExamTitle</th>
    <th>Exam Subject</th>
-<th>Result</th>
+   <th>Result</th>
+<th>Objections</th>
    </tr>";
 
 
@@ -84,6 +86,11 @@ GetExamsTable();
    echo "<td>".'<button type="submit" class="DeleteBT" Name="ExamID" value="'.$TheTable1['ExamID'] .'">Show Result</button><br>'. "</td>";
    echo '</form>';
 
+
+   echo '<form action="./ShowObjection.php" method="post">';
+
+   echo "<td>".'<button type="submit" class="DeleteBT" Name="ExamID" value="'.$TheTable1['ExamID'] .'">Show Objections</button><br>'. "</td>";
+   echo '</form>';
 
    echo "</tr>";
 

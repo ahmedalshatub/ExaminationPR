@@ -76,6 +76,7 @@ GetStudntsTable();
    <th>Student ID</th>
    <th>Student Name</th>
    <th>Student Stage</th>
+   <th>         </th>
 
 
    </tr>";
@@ -98,7 +99,9 @@ if($TheTable['StLevel']==1)
 
 
 
-
+                    echo '<form action="./DeleteStudent.php" method="post">';
+                    echo "<td>".'<button class="DeleteBT" type="submit" Name="STID" value="'.$TheTable['StID'] .'">Delete</button><br>'. "</td>";
+                       echo '</form>';
    echo "</tr>";
    }
    echo "</table>";
