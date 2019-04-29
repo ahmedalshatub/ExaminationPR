@@ -65,7 +65,7 @@ th:first-child, td:first-child {
 tr{
 
   background-color: #f1f7f4
-
+inherit;
 }
 tr:nth-child(even) {
   background-color: #4559
@@ -178,7 +178,7 @@ text-decoration: none;
 border-style: none;
 background-color: #455445;
 	border-radius: 18px;
-  font-size: 30px;}
+  font-size:20px;}
 .BoxesClass{
 padding-left: 120px;
 

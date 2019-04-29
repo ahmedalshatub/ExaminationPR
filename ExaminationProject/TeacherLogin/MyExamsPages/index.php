@@ -57,8 +57,10 @@ GetExamsTable();
    <th>ExamID</th>
    <th>ExamTitle</th>
    <th>Exam Subject</th>
-   <th>Result</th>
+   <th>Answers</th>
 <th>Objections</th>
+<th>Result</th>
+<th>Delete</th>
    </tr>";
 
 
@@ -83,16 +85,30 @@ GetExamsTable();
 
    echo '<form action="./ExamResult.php" method="post">';
 
-   echo "<td>".'<button type="submit" class="DeleteBT" Name="ExamID" value="'.$TheTable1['ExamID'] .'">Show Result</button><br>'. "</td>";
+   echo "<td>".'<button type="submit" class="DeleteBT" Name="ExamID" value="'.$TheTable1['ExamID'] .'">Show Answers</button><br>'. "</td>";
    echo '</form>';
 
 
    echo '<form action="./ShowObjection.php" method="post">';
 
-   echo "<td>".'<button type="submit" class="DeleteBT" Name="ExamID" value="'.$TheTable1['ExamID'] .'">Show Objections</button><br>'. "</td>";
+   echo "<td>".'<button type="submit" class="DeleteBT" Name="ExamID" value="'.$TheTable1['ExamID'] .'">Objections</button><br>'. "</td>";
+   echo '</form>';
+
+   echo '<form action="./ShowResult.php" method="post">';
+
+   echo "<td>".'<button type="submit" class="DeleteBT" Name="ExamID" value="'.$TheTable1['ExamID'] .'">results</button><br>'. "</td>";
+   echo '</form>';
+
+   
+
+   echo '<form action="./DeleteExam.php" method="post">';
+
+   echo "<td>".'<button type="submit" class="DeleteBT" Name="ExamID" value="'.$TheTable1['ExamID'] .'">Delete</button><br>'. "</td>";
    echo '</form>';
 
    echo "</tr>";
+
+
 
 
  }

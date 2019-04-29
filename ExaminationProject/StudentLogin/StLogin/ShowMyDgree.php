@@ -20,7 +20,9 @@ unset($_SESSION['ErorrText']);}
 </head>
   <br>  <br>
 <body background="../../img/bg.jpg">
-
+  <center>
+<h1 >--<?php echo GetStName($_COOKIE['StID']); ?>--</h1>
+</center><br><br>
   <div class="StBT"><center>
     <a  href="./LogOut.php">Log Out</a>
     <a  href="./HomePage.php">Show avalible Exams</a></center></div>
@@ -133,3 +135,17 @@ echo '</form>';
  return $row[0];
 
  } ?>
+
+ <?php
+ function GetStName($StID) {
+  include '../Connection.php';
+      $sql = "SELECT `StName`  FROM `studentstable` Where `StID` = '$StID' limit 1 " ;
+ $result1 = $mysqli->query($sql);
+
+
+ $row = mysqli_fetch_array($result1);
+ return $row[0];
+
+ }
+
+  ?>

@@ -23,7 +23,9 @@ unset($_SESSION['ErorrText']);}
  ?>
 </head>
 <body background="../../img/bg.jpg">
-
+  <center>
+<h1 >--<?php echo GetStName($_COOKIE['StID']); ?>--</h1>
+</center><br><br>
 
 
 
@@ -53,3 +55,19 @@ unset($_SESSION['ErorrText']);}
 
 </body>
 </html>
+
+
+
+<?php
+function GetStName($StID) {
+ include '../Connection.php';
+     $sql = "SELECT `StName`  FROM `studentstable` Where `StID` = '$StID' limit 1 " ;
+$result1 = $mysqli->query($sql);
+
+
+$row = mysqli_fetch_array($result1);
+return $row[0];
+
+}
+
+ ?>
